@@ -9,6 +9,7 @@ import { Directive } from '@angular/core';
 
 export class AppComponent {//initial state of application
   title:string = ''
+  serverElements = [{type: 'server', name: 'Testserver', content:'Just a test!'}];
 
  
 
