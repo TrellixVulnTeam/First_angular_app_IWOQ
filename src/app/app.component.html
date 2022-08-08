@@ -1,12 +1,12 @@
 
-<div class="container">
+<!-- <div class="container">
   <app-cockpit 
   (serverCreated)="onServerAdded($event)"
   (bluePrintCreated)="onBlueprintAdded($event)"
   ></app-cockpit>
   <hr>
   <div class="col-xs-12">
-    <!-- <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server-element>  -->
+    <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server-element> 
     <app-server-element *ngFor="let serverElement of serverElements">
       <p>
         <strong *ngIf="serverElement.type === 'server'" style="color: red;">{{serverElement.content}}</strong>
@@ -15,14 +15,16 @@
     </app-server-element> 
 
   </div>
-</div>
+</div> -->
 
-<!-- <app-header></app-header>
+<!-- <app-header (feautureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="feautureStart === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="feautureStart === 'shopping-list'"></app-shopping-list>
     </div>
   </div>
 </div> -->
+<p appBasicHighlight>Style me with basic directive</p>
+<p appBetterHighlight [defaultColor]="'yellow'" hightlightColor="'red'">Style me with basic directive</p>

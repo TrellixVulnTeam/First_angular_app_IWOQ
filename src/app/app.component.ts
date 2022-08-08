@@ -10,7 +10,7 @@ import { Directive } from '@angular/core';
 export class AppComponent {//initial state of application
   title:string = ''
   serverElements = [{type: '', name: '', content:''}];
-
+  feautureStart = 'recipe';
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
@@ -25,6 +25,10 @@ export class AppComponent {//initial state of application
       name: blueprintData.serverName,
       content: blueprintData.serverContent
     })
+  }
+
+  onNavigate(feauture:string) {
+    this.feautureStart = feauture;
   }
 
 }
