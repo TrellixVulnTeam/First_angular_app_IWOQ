@@ -9,7 +9,7 @@ import { Directive } from '@angular/core';
 
 export class AppComponent {//initial state of application
   title:string = ''
-  serverElements = [{type: 'server', name: 'Testserver', content:'Just a test!'}];
+  serverElements = [{type: '', name: '', content:''}];
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
