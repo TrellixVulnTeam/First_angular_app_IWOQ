@@ -15,11 +15,12 @@ import { ServerElementComponent } from './server-element/server-element.componen
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 import { UnlessDirective } from './unless.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @NgModule({ //Decorator
   declarations: [ //
-    AppComponent, HeaderComponent, RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingListComponent, ShoppingEditComponent, CockpitComponent, ServerElementComponent,BasicHighlightDirective, BetterHighlightDirective, UnlessDirective
+    AppComponent, HeaderComponent, RecipesComponent, RecipeListComponent, RecipeDetailComponent, RecipeItemComponent, ShoppingListComponent, ShoppingEditComponent, CockpitComponent, ServerElementComponent,BasicHighlightDirective, BetterHighlightDirective, UnlessDirective,DropdownDirective
 
   ],
 
