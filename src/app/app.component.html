@@ -26,5 +26,9 @@
     </div>
   </div>
 </div> -->
+<button (click)="onChange()">Press me</button>
+<div *appUnless="fire">
+  <li>Hello all</li>
+</div>
 <p appBasicHighlight>Style me with basic directive</p>
-<p appBetterHighlight [defaultColor]="'yellow'" hightlightColor="'red'">Style me with basic directive</p>
+<p appBetterHighlight [defaultColor]="'yellow'" [hightlightColor]="'red'">Style me with basic directive</p>

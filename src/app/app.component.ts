@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Directive } from '@angular/core';
 @Component({
   selector: 'app-root',
@@ -7,10 +7,19 @@ import { Directive } from '@angular/core';
 })
 
 
-export class AppComponent {//initial state of application
+export class AppComponent implements OnInit {//initial state of application
   title:string = ''
   serverElements = [{type: '', name: '', content:''}];
   feautureStart = 'recipe';
+  fire: boolean = true;
+  constructor() {
+    console.log('Constructor')
+  }
+
+  ngOnInit(): void {
+    console.log('OnInit Called')
+  }
+
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
       type: 'server',
@@ -29,6 +38,10 @@ export class AppComponent {//initial state of application
 
   onNavigate(feauture:string) {
     this.feautureStart = feauture;
+  }
+
+  onChange() {
+    this.fire = !this.fire
   }
 
 }
